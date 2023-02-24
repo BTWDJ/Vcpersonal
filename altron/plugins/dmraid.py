@@ -14,7 +14,7 @@ async def dmraid(xspam: Client, e: Message):
           ok = await xspam.get_users(TheAltronX[1])
           id = ok.id
           if int(id) in VERIFIED_USERS:
-                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴀʟᴛʀᴏɴ x`"
+                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴀʟᴘʜᴀ x`"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
                 text = f"`ᴛʜɪs ᴘᴇʀsᴏɴ ɪs ᴍʏ sᴜᴅᴏ ᴜsᴇʀ`"
@@ -32,7 +32,7 @@ async def dmraid(xspam: Client, e: Message):
           ok = await xspam.get_users(user_id)
           id = ok.id
           if int(id) in VERIFIED_USERS:
-                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴀʟᴛʀᴏɴ x`"
+                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴀʟᴘʜᴀ x`"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
                 text = f"`ᴛʜɪs ᴘᴇʀsᴏɴ ɪs ᴍʏ sᴜᴅᴏ ᴜsᴇʀ`"
