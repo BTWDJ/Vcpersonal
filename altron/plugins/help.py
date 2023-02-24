@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 @client.on_message(filters.command(["help"], ["/", "!", "."]) & filters.me)
 async def start(client, message: Message):
     await message.reply_text(
-    f"»__ ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ ɢᴏ ᴛᴏ ʏᴏᴜʀ ᴄʀᴇᴀᴛᴇᴅ ʙᴏᴛ's ᴅᴍ__ » **@{BOT_USERNAME}** \n\n__sᴏᴏɴ ᴀᴅᴅɪɴɢ ɪɴʟɪɴᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ʙᴜᴛᴛᴏɴs ɪɴ ᴜsᴇʀʙᴏᴛ ᴊᴏɪɴ__ » **@TheAltron_X**"
+    f"»__ ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ ɢᴏ ᴛᴏ ʏᴏᴜʀ ᴄʀᴇᴀᴛᴇᴅ ʙᴏᴛ's ᴅᴍ__ » **@{BOT_USERNAME}** \n\n__sᴏᴏɴ ᴀᴅᴅɪɴɢ ɪɴʟɪɴᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ʙᴜᴛᴛᴏɴs ɪɴ ᴜsᴇʀʙᴏᴛ ᴊᴏɪɴ__ » **@NooBpy**"
     )
     
 
@@ -23,11 +23,11 @@ async def start(client: Client, message: Message):
 """
     buttons = [
             [
-                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheAltron"),
-                InlineKeyboardButton("✘ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Altron_X"),
+                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Alpha_X_supports"),
+                InlineKeyboardButton("✘ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/The_Alpha_X_help"),
             ],
             [
-                InlineKeyboardButton("✘ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/TheAltronX/AltronUserbot"),
+                InlineKeyboardButton("✘ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://te.legra.ph/file/b6b176848aba2019732ac.jpg"),
                 InlineKeyboardButton("✘ ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Shailendra34"),
             ],
             [
@@ -41,10 +41,10 @@ async def start(client: Client, message: Message):
 @bot.on_message(filters.command(["help"], ["/", "$"]))
 def help_(Client, message: Message):
     HELP_TXT = """🤖 ʜᴏɪ..!!! 
-__ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴅᴇsɪʀᴇ ᴏᴘᴛɪᴏɴ ɴᴅ ᴇxᴘʟᴏʀᴇ ɪᴛ. \nғᴏʀ ᴀɴʏ ᴋɪɴᴅ ᴏғ ʜᴇʟᴘ ᴏʀ ǫᴜᴇʀʏ ᴊᴜsᴛ ᴊᴏɪɴ @Altron_X ᴀɴᴅ ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇʀʏ. __"""
+__ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴅᴇsɪʀᴇ ᴏᴘᴛɪᴏɴ ɴᴅ ᴇxᴘʟᴏʀᴇ ɪᴛ. \nғᴏʀ ᴀɴʏ ᴋɪɴᴅ ᴏғ ʜᴇʟᴘ ᴏʀ ǫᴜᴇʀʏ ᴊᴜsᴛ ᴊᴏɪɴ @NooBpy ᴀɴᴅ ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇʀʏ. __"""
     
     message.reply_photo(
-        photo="https://te.legra.ph/file/7abe179ff252aaabbf2a5.jpg",
+        photo="https://graph.org/file/9f42a96927233d2536ebb.jpg",
         caption=HELP_TXT,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -70,7 +70,7 @@ def callback_query(Client, callback: CallbackQuery):
     if callback.data == "help_":
     
         HELP_TXT = """🤖 ʜᴏɪ..!!! 
-__ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴅᴇsɪʀᴇ ᴏᴘᴛɪᴏɴ ɴᴅ ᴇxᴘʟᴏʀᴇ ɪᴛ. \nғᴏʀ ᴀɴʏ ᴋɪɴᴅ ᴏғ ʜᴇʟᴘ ᴏʀ ǫᴜᴇʀʏ ᴊᴜsᴛ ᴊᴏɪɴ @Altron_X ᴀɴᴅ ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇʀʏ. __"""
+__ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴅᴇsɪʀᴇ ᴏᴘᴛɪᴏɴ ɴᴅ ᴇxᴘʟᴏʀᴇ ɪᴛ. \nғᴏʀ ᴀɴʏ ᴋɪɴᴅ ᴏғ ʜᴇʟᴘ ᴏʀ ǫᴜᴇʀʏ ᴊᴜsᴛ ᴊᴏɪɴ @NooBpy ᴀɴᴅ ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇʀʏ. __"""
     
         HELP_BUTTON = [
         [
@@ -101,12 +101,12 @@ __ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴅ�
 """
         BUTTON = [
             [
-                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheAltron"),
-                InlineKeyboardButton("✘ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Altron_X"),
+                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Alpha_X_supports"),
+                InlineKeyboardButton("✘ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/The_Alpha_X_help"),
             ],
             [
-                InlineKeyboardButton("✘ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/TheAltronX/AltronUserbot"),
-                InlineKeyboardButton("✘ ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Shailendra34"),
+                InlineKeyboardButton("✘ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://te.legra.ph/file/b6b176848aba2019732ac.jpg"),
+                InlineKeyboardButton("✘ ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/NooBpy"),
             ],
             [
                 InlineKeyboardButton("✘ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="help_"),
