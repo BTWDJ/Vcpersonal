@@ -1,18 +1,14 @@
-FROM python:3.9
+FROM nikolaik/python-nodejs:python3.9-nodejs18
 
-RUN apt update && apt upgrade -y
-RUN apt install python3-pip -y
-RUN apt install ffmpeg -y
+RUN apt-get update -y && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends ffmpeg \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
-RUN npm i -g npm
+COPY . /app/
 
-RUN mkdir /app/
-COPY . /app
-WORKDIR /app
+WORKDIR /app/
 
-RUN pip3 install --upgrade pip
-RUN pip3 install -U -r requirements.txt
+RUN pip3 install --no-cache-dir --upgrade pip --requirement requirements.txt
 
 CMD python3 main.py
