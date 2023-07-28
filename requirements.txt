@@ -1,0 +1,12 @@
+aiofiles
+aiohttp
+asyncio
+pyrogram==1.4.16
+git+https://github.com/yt-dlp/yt-dlp@master
+python-arq
+python-dotenv
+py-tgcalls
+requests
+TgCrypto
+wget
+youtube-search-python==1.4.6
