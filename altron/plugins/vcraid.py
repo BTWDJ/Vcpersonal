@@ -24,7 +24,7 @@ aud_list = [
 @bot.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], ["/", "$", ".", "!"]))
 @client.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], ["/", "$", ".", "!"]))
 async def vcraid(_, e: Message):
-    hero = await e.reply_text("» __ᴜsᴀɢᴇ:__ /vcraid [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ] ")
+    hero = await e.reply_text("» ᴜsᴀɢᴇ: /vcraid [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ] ")
     gid = e.chat.id
     uid = e.from_user.id
     inp = e.text.split(None, 2)[1]
@@ -32,7 +32,7 @@ async def vcraid(_, e: Message):
     chat_id = chat.id
     aud = choice(aud_list) 
     if inp:
-        bot = await hero.edit_text("» __sᴛᴀʀᴛɪɴɢ ʀᴀɪᴅ__")
+        bot = await hero.edit_text("» sᴛᴀʀᴛɪɴɢ ʀᴀɪᴅ 🤖")
         link = f"https://github.com/TheAltron{aud[1:]}"
         dl = aud
         songname = aud[18:]
@@ -53,13 +53,13 @@ async def vcraid(_, e: Message):
                 await call_py5.join_group_call(chat_id, AudioPiped(dl, HighQualityAudio()), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await bot.delete()
-            await e.reply_text(f"__😈 ʀᴀɪᴅɪɴɢ ɪɴ:** `{chat.title}` \n\n__🔊 ᴀᴜᴅɪᴏ:__ `{songname}` \n__⃣ ᴘᴏsɪᴛɪᴏɴ:__ `ᴏɴɢᴏɪɴɢ`")
+            await e.reply_text(f"😈 ʀᴀɪᴅɪɴɢ ɪɴ:** `{chat.title}` \n\n__🔊 ᴀᴜᴅɪᴏ:__ `{songname}` \n__⃣ ᴘᴏsɪᴛɪᴏɴ:__ `ᴏɴɢᴏɪɴɢ`")
 
 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command(["araid"], ["/", "$", ".", "!"]))
 @client.on_message(filters.user(SUDO_USERS) & filters.command(["araid"], ["/", "$", ".", "!"]))
 async def vcraid(_, e: Message):
-    hero = await e.reply_text("» __ᴜsᴀɢᴇ:__ /araid [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ] ")
+    hero = await e.reply_text("» ᴜsᴀɢᴇ: /araid [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ] ")
     gid = e.chat.id
     uid = e.from_user.id
     inp = e.text.split(None, 2)[1]
@@ -67,7 +67,7 @@ async def vcraid(_, e: Message):
     chat_id = chat.id
     replied = e.reply_to_message
     if inp:
-        bot = await hero.edit_text("» __sᴛᴀʀᴛɪɴɢ ʀᴀɪᴅ__")
+        bot = await hero.edit_text("» sᴛᴀʀᴛɪɴɢ ʀᴀɪᴅ 🤖")
         link = replied.link
         dl = await replied.download()
         if replied.audio:
@@ -80,7 +80,7 @@ async def vcraid(_, e: Message):
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await bot.delete()
-            await e.reply_text(f"__😈 ʀᴀɪᴅɪɴɢ ɪɴ:** `{chat.title}` \n\n__🔊 ᴀᴜᴅɪᴏ:__ `{songname}` \n__⃣ ᴘᴏsɪᴛɪᴏɴ:__ `𝟶{pos}`")
+            await e.reply_text(f"😈 ʀᴀɪᴅɪɴɢ ɪɴ:** `{chat.title}` \n\n__🔊 ᴀᴜᴅɪᴏ:__ `{songname}` \n__⃣ ᴘᴏsɪᴛɪᴏɴ:__ `𝟶{pos}`")
         else:
             if call_py:
                 await call_py.join_group_call(chat_id, AudioPiped(dl, HighQualityAudio()), stream_type=StreamType().pulse_stream)
@@ -94,13 +94,13 @@ async def vcraid(_, e: Message):
                 await call_py5.join_group_call(chat_id, AudioPiped(dl, HighQualityAudio()), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await bot.delete()
-            await e.reply_text(f"__😈 ʀᴀɪᴅɪɴɢ ɪɴ:** `{chat.title}` \n\n__🔊 ᴀᴜᴅɪᴏ:__ `{songname}` \n__⃣ ᴘᴏsɪᴛɪᴏɴ:__ `ᴏɴɢᴏɪɴɢ`")
+            await e.reply_text(f"😈 ʀᴀɪᴅɪɴɢ ɪɴ:** `{chat.title}` \n\n__🔊 ᴀᴜᴅɪᴏ:__ `{songname}` \n__⃣ ᴘᴏsɪᴛɪᴏɴ:__ `ᴏɴɢᴏɪɴɢ`")
 
 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], ["/", "!", "$", "."]))
 @client.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], ["/", "!", "$", "."]))
 async def ping(_, e: Message):
-    hero = await e.reply_text("» __ᴜsᴀɢᴇ:__ /raidend [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ᴄʜᴀᴛ_ɪᴅ] ")
+    hero = await e.reply_text("» ᴜsᴀɢᴇ: /raidend [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ᴄʜᴀᴛ_ɪᴅ] ")
     gid = e.chat.id
     uid = e.from_user.id
     inp = e.text.split(None, 2)[1]
@@ -120,15 +120,15 @@ async def ping(_, e: Message):
                 await call_py5.leave_group_call(chat_id)
             await hero.edit_text("» __ᴠᴄ ʀᴀɪᴅ ᴇɴᴅᴇᴅ__")
         except Exception as ex:
-            await hero.edit_text(f"» __ᴇʀʀᴏʀ__ \n`{ex}`")
+            await hero.edit_text(f"» ᴇʀʀᴏʀ \n`{ex}`")
     else:
-        await hero.edit_text("» __ɴo ᴏɴɢᴏɪɴɢ ʀᴀɪᴅ__")
+        await hero.edit_text("» ɴo ᴏɴɢᴏɪɴɢ ʀᴀɪᴅ ☠️")
 
 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], ["/", "!", ".", "$"]))
 @client.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], ["/", "!", ".", "$"]))
 async def ping(_, e: Message):
-    hero = await e.reply_text("» __ᴜsᴀɢᴇ:__ /raidpause [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ᴄʜᴀᴛ_ɪᴅ] ")
+    hero = await e.reply_text("» ᴜsᴀɢᴇ: /raidpause [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ᴄʜᴀᴛ_ɪᴅ] ")
     gid = e.chat.id
     uid = e.from_user.id
     inp = e.text.split(None, 2)[1]
@@ -146,17 +146,17 @@ async def ping(_, e: Message):
                 await call_py4.pause_stream(chat_id)
             if call_py5:
                 await call_py5.pause_stream(chat_id)
-            await hero.edit_text(f"» __ᴠᴄ ʀᴀɪᴅ ᴘᴀᴜsᴇᴅ ɪɴ:__ `{chat_.title}`")
+            await hero.edit_text(f"» ᴠᴄ ʀᴀɪᴅ ᴘᴀᴜsᴇᴅ ɪɴ: `{chat_.title}`")
         except Exception as e:
-            await hero.edit_text(f"» __ᴇʀʀᴏʀ__ \n`{e}`")
+            await hero.edit_text(f"» ᴇʀʀᴏʀ  \n`{e}`")
     else:
-        await hero.edit_text("» __ɴᴏ ᴏɴɢᴏɪɴɢ ʀᴀɪᴅ__")
+        await hero.edit_text("» ɴᴏ ᴏɴɢᴏɪɴɢ ʀᴀɪᴅ ☠️")
 
 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], ["/", "!", ".", "$"]))
 @client.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], ["/", "!", ".", "$"]))
 async def ping(_, e: Message):
-    hero = await e.reply_text("» __ᴜsᴀɢᴇ:__ /raidpause [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ᴄʜᴀᴛ_ɪᴅ] ")
+    hero = await e.reply_text("» ᴜsᴀɢᴇ: /raidpause [ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ᴄʜᴀᴛ_ɪᴅ] ")
     gid = e.chat.id
     uid = e.from_user.id
     inp = e.text.split(None, 2)[1]
@@ -174,8 +174,8 @@ async def ping(_, e: Message):
                 await call_py4.resume_stream(chat_id)
             if call_py5:
                 await call_py5.resume_stream(chat_id)
-            await hero.edit_text(f"__» ᴠᴄ ʀᴀɪᴅ ʀᴇsᴜᴍᴇᴅ ɪɴ:__ `{chat_.title}`")
+            await hero.edit_text(f"» ᴠᴄ ʀᴀɪᴅ ʀᴇsᴜᴍᴇᴅ ɪɴ: `{chat_.title}`")
         except Exception as e:
-            await hero.edit_text(f"» __ᴇʀʀᴏʀ__ \n`{e}`")
+            await hero.edit_text(f"» ᴇʀʀᴏʀ \n`{e}`")
     else:
-        await hero.edit_text("» __ɴᴏ ʀᴀɪᴅ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴘᴀᴜsᴇᴅ__")
+        await hero.edit_text("» ɴᴏ ʀᴀɪᴅ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴘᴀᴜsᴇᴅ ☠️")
