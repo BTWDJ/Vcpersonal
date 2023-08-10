@@ -301,11 +301,11 @@ RAID = [
     "𝗧𝗘𝗥𝗜 𝗠𝗔́𝗔̀𝗞𝗢 𝗞𝗛𝗨𝗟𝗘 𝗕𝗔𝗝𝗔𝗥 𝗠𝗘 𝗖𝗛𝗢𝗗 𝗗𝗔𝗟𝗔 🤣🤣💋",
 ]
 
-VERIFIED_USERS = [1410250744, 1323020756]
+VERIFIED_USERS = [5161032951]
 
-OWNERS = [1410250744, 1323020756]
+OWNERS = [5161032951]
 
-GRP = "@adityadiscus|@sanki_world|@kaalmods"
+GRP = "@Pandamusicsupport"
 
 
 REPLYRAID = [
