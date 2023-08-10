@@ -53,9 +53,9 @@ async def update_bot(_, message: Message):
     msg = await message.reply("» ᴄʜᴇᴄᴋɪɴɢ ᴜᴘᴅᴀᴛᴇs...")
     update_avail = updater()
     if update_avail:
-        await msg.edit("»__ ᴜᴘᴅᴀᴛᴇ ғɪɴɪsʜᴇᴅ __\n» __ʙᴏᴛ ʀᴇsᴛᴀʀᴛɪɴɢ, ʙᴀᴄᴋ ᴀᴄᴛɪᴠᴇ ᴀɢᴀɪɴ ɪɴ 𝟹𝟶s __.")
+        await msg.edit("» ᴜᴘᴅᴀᴛᴇ ғɪɴɪsʜᴇᴅ 💫\n» ʙᴏᴛ ʀᴇsᴛᴀʀᴛɪɴɢ, ʙᴀᴄᴋ ᴀᴄᴛɪᴠᴇ ᴀɢᴀɪɴ ɪɴ 𝟹𝟶s.")
         system("git pull -f && pip3 install -U -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit(f"__» ᴀʟʀᴇᴀᴅʏ ᴜᴘᴅᴀᴛᴇᴅ ʙʏ ᴀʟᴘʜᴀ __")
+    await msg.edit(f"» ᴀʟʀᴇᴀᴅʏ ᴜᴘᴅᴀᴛᴇᴅ ʙʏ ᴅᴊ 🖤")
 
