@@ -7,7 +7,7 @@ from config import SUDO_USERS as SUDO_USER
 
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def delspam(client: Client, message: Message):
-    hero = await message.reply_text("😈 Usage:\n !delspam 10 Umm")
+    hero = await message.reply_text("😈 ᴜsᴀɢᴇ:\n !delspam 10 ᴅᴊ ᴏᴘ")
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
@@ -22,7 +22,7 @@ async def delspam(client: Client, message: Message):
 
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["spam", "spamming"], [".", "!", "/"]))
 async def suspam(client: Client, message: Message):
-    hero = await message.reply_text("😈 Usage:\n !spam 10 Umm")
+    hero = await message.reply_text("😈 ᴜsᴀɢᴇ:\n !spam 10 ᴅᴊ ᴏᴘ")
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
@@ -32,18 +32,18 @@ async def suspam(client: Client, message: Message):
         for _ in range(quantity):
             await client.send_message(message.chat.id, spam_text,
                                       reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.2)
+            await asyncio.sleep(0.01)
         return
 
     for _ in range(quantity):
         await hero.delete()
         await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.01)
 
 
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["fastspam", "fspam"], [".", "!", "/"]))
 async def spspam(client: Client, message: Message):
-    hero = await message.reply_text("😈 Usage:\n !fspam 10 Umm")
+    hero = await message.reply_text("😈 ᴜsᴀɢᴇ:\n !fspam 10 ᴅᴊ ᴏᴘ")
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
@@ -65,7 +65,7 @@ async def spspam(client: Client, message: Message):
 
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["slowspam", "dspam", "delayspam"], [".", "!", "/"]))
 async def sperm(client: Client, message: Message):
-    hero = await message.reply_text("⚡ Usage:\n !slowspam 10 Umm")
+    hero = await message.reply_text("⚡ ᴜsᴀɢᴇ:\n !slowspam 10 ᴅᴊ ᴏᴘ")
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
@@ -92,10 +92,10 @@ async def sperm(client: Client, message: Message):
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
 async def pussy(client: Client, message: Message):
     if not message.reply_to_message:
-        await message.edit_text("**reply to a sticker with amount you want to spam**")
+       await message.edit_text(text="**ʀᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴡɪᴛʜ ᴀᴍᴏᴜɴᴛ ᴜ ᴡᴀɴᴛ ᴛᴏ sᴘᴀᴍ**")
         return
     if not message.reply_to_message.sticker:
-        await message.edit_text(text="**reply to a sticker with amount you want to spam**")
+        await message.edit_text(text="**ʀᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴡɪᴛʜ ᴀᴍᴍᴏᴜɴᴛ ᴜ ᴡᴀɴᴛ ᴛᴏ sᴘᴀᴍ**")
         return
     else:
         i=0
@@ -124,12 +124,12 @@ async def fuck(client: Client, message: Message):
     hero = message.text[6:]
     count = 0
     if not hero:
-        return await message.reply_text("Need a chat username or invite link to join.")
+        return await message.reply_text("ɴᴇᴇᴅ ᴀ ᴄʜᴀᴛ ʟɪɴᴋ ᴏʀ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ᴊᴏɪɴ.")
     if hero.isnumeric():
         return await message.reply_text("Can't join a chat with chat id. Give username or invite link.")
     try:
         await client.join_chat(hero)
-        await message.reply_text(f"**Joined ✅**")
+        await message.reply_text(f"**ᴊᴏɪɴᴇᴅ ✅**")
     except Exception as ex:
         await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
 
@@ -139,11 +139,11 @@ async def leftfuck(client: Client, message: Message):
     hero = message.text[6:]
     count = 0
     if not hero:
-        return await message.reply_text("Need a chat username or invite link to leave.")
+        return await message.reply_text("ɴᴇᴇᴅ ᴀ ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʟɪɴᴋ ᴛᴏ ʟᴇᴀᴠᴇ.")
     if hero.isnumeric():
         return await message.reply_text("Can't leave a chat with chat id. Give username or invite link.")
     try:
         await client.leave_chat(hero)
-        await message.reply_text(f"**Left ❌**")
+        await message.reply_text(f"**ʟᴇғᴛ ❌**")
     except Exception as ex:
         await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
