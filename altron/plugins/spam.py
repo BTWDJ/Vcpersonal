@@ -93,10 +93,10 @@ async def sperm(client: Client, message: Message):
 async def pussy(client: Client, message: Message):
     if not message.reply_to_message:
        await message.edit_text(text="**ʀᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴡɪᴛʜ ᴀᴍᴏᴜɴᴛ ᴜ ᴡᴀɴᴛ ᴛᴏ sᴘᴀᴍ**")
-        return
+     return
     if not message.reply_to_message.sticker:
         await message.edit_text(text="**ʀᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴡɪᴛʜ ᴀᴍᴍᴏᴜɴᴛ ᴜ ᴡᴀɴᴛ ᴛᴏ sᴘᴀᴍ**")
-        return
+     return
     else:
         i=0
         times = message.command[1]
