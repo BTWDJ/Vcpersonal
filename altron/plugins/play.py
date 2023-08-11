@@ -48,7 +48,7 @@ async def play(client, m: Message):
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("**🔄 𝑷𝒓𝒐𝒄𝒆𝒔𝒔𝒊𝒏𝒈...**")
+            huehue = await replied.reply("**🔄 ᴘʀᴏᴄᴇssɪɴɢ...**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -64,7 +64,7 @@ async def play(client, m: Message):
                 # await m.reply_to_message.delete()
                 await m.reply_text(f"""
 **⃣ 𝑺𝒐𝒏𝒈 𝒊𝒏 𝒒𝒖𝒆𝒖𝒆 𝒕𝒐 {pos}
-🎵 𝑶𝒏 𝒓𝒆𝒒𝒖𝒆𝒔𝒕 {m.from_user.mention}**
+🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
 """,
                 )
             else:
@@ -80,21 +80,21 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_text(f"""
-**▶️ 𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝒑𝒍𝒂𝒚𝒊𝒏𝒈 𝒔𝒐𝒏𝒈
-🎵 𝑶𝒏 𝒓𝒆𝒒𝒖𝒆𝒔𝒕 {m.from_user.mention}**
+**▶ sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ sᴏɴɢ
+🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
 """,
                 )
 
     else:
         if len(m.command) < 2:
-            await m.reply("💫 𝑹𝒆𝒑𝒍𝒚 𝒕𝒐 𝒂𝒏 𝒂𝒖𝒅𝒊𝒐 𝒇𝒊𝒍𝒆 𝒐𝒓 𝒑𝒓𝒐𝒗𝒊𝒅𝒆 𝒔𝒐𝒎𝒆𝒕𝒉𝒊𝒏𝒈 𝒇𝒐𝒓 𝒔𝒆𝒂𝒓𝒄𝒉")
+            await m.reply("💫 ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏʀ ᴘʀᴏᴠɪᴅᴇ ᴍᴇ ᴛᴏ sᴇᴀʀᴄʜ")
         else:
             await m.delete()
-            huehue = await m.reply("🔎 𝑺𝒆𝒂𝒓𝒄𝒉𝒊𝒏𝒈...")
+            huehue = await m.reply("🔎 sᴇᴀʀᴄʜɪɴɢ...")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await huehue.edit("`❌ 𝑭𝒐𝒖𝒏𝒅 𝒏𝒐𝒕𝒉𝒊𝒏𝒈 `")
+                await huehue.edit("`❌ ɴᴏᴛʜɪɴɢ ғᴏᴜɴᴅ`")
             else:
                 songname = search[0]
                 url = search[1]
@@ -108,7 +108,7 @@ async def play(client, m: Message):
                         # await m.reply_to_message.delete()
                         m.reply_text(f"""
 **⃣ 𝑨𝒅𝒅𝒆𝒅 𝒊𝒏 𝒒𝒖𝒆𝒖𝒆 𝒂𝒕 {pos}
-🎵 𝑶𝒏 𝒓𝒆𝒒𝒖𝒆𝒔𝒕 {m.from_user.mention}**
+🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
 """,
                         )
                     else:
@@ -125,8 +125,8 @@ async def play(client, m: Message):
                             await huehue.delete()
                             # await m.reply_to_message.delete()
                             await m.reply_text(f"""
-**▶️ 𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝒑𝒍𝒂𝒚𝒊𝒏𝒈 𝒔𝒐𝒏𝒈
-🎵 𝑶𝒏 𝒓𝒆𝒒𝒖𝒆𝒔𝒕 {m.from_user.mention}**
+**▶ sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ sᴏɴɢ
+🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
@@ -173,16 +173,16 @@ async def playfrom(client, m: Message):
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     # await m.reply_to_message.delete()
                     await m.reply_text(f"""
-**▶️ 𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝒑𝒍𝒂𝒚𝒊𝒏𝒈 𝒔𝒐𝒏𝒈𝒔 𝒇𝒓𝒐𝒎 {chat}
-🎵 𝑶𝒏 𝒓𝒆𝒒𝒖𝒆𝒔𝒕 {m.from_user.mention}**
+**▶ sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ sᴏɴɢ ғʀᴏᴍ: {chat}
+🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
 """,
                     )
             await hmm.delete()
             await m.reply(
-                f"➕ 𝑨𝒅𝒅𝒊𝒏𝒈 {lmt} 𝒔𝒐𝒏𝒈𝒔 𝒊𝒏𝒕𝒐 𝒒𝒖𝒆𝒖𝒆\n𝒄𝒍𝒊𝒄𝒌 `!playlist` 𝒕𝒐 𝒗𝒊𝒆𝒘 𝒑𝒍𝒂𝒚𝒍𝒊𝒔𝒕**"
+                f"➕ ᴀᴅᴅɪɴɢ {lmt} sᴏɴɢs ɪɴᴛᴏ ǫᴜᴇᴠᴇ\nᴄʟɪᴄᴋ `!playlist` ᴛᴏ ᴠɪᴇᴡ ᴘʟᴀʏʟɪsᴛ**"
             )
         except Exception as e:
-            await hmm.edit(f"**𝑬𝒓𝒓𝒐𝒓....** \n`{e}`")
+            await hmm.edit(f"**ᴇʀʀᴏʀ....** \n`{e}`")
 
 
 @client.on_message(commandpro(["/pl", "/playlist", "!playlist", "!pl", "pl", "/queue"]))
@@ -195,11 +195,11 @@ async def playlist(client, m: Message):
         if len(chat_queue) == 1:
             await m.delete()
             await m.reply(
-                f"**🎵 𝑵𝒐𝒘 𝑷𝒍𝒂𝒚𝒊𝒏𝒈** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
+                f"**🎵 ɴᴏᴡ ᴘʟᴀʏɪɴɢ:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 disable_web_page_preview=True,
             )
         else:
-            QUE = f"**🎵 𝑵𝒐𝒘 𝑷𝒍𝒂𝒚𝒊𝒏𝒈** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯️ 𝑸𝒖𝒆𝒖𝒆 𝑳𝒊𝒔𝒕**"
+            QUE = f"**🎵 ɴᴏᴡ ᴘʟᴀʏɪɴɢ:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯️ 𝑸𝒖𝒆𝒖𝒆 𝑳𝒊𝒔𝒕**"
             l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
@@ -208,4 +208,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**❌ 𝑫𝒐𝒆𝒔𝒏'𝒕 𝒑𝒍𝒂𝒚 𝒂𝒏𝒚𝒕𝒉𝒊𝒏𝒈**")
+        await m.reply("**❌ ᴅᴏᴇsɴ'ᴛ ᴘʟᴀʏ ᴀɴʏᴛʜɪɴɢ**")
