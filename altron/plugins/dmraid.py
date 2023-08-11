@@ -14,14 +14,14 @@ async def dmraid(xspam: Client, e: Message):
           ok = await xspam.get_users(TheAltronX[1])
           id = ok.id
           if int(id) in VERIFIED_USERS:
-                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴀʟᴘʜᴀ x`"
+                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴍᴇ`"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
                 text = f"`ᴛʜɪs ᴘᴇʀsᴏɴ ɪs ᴍʏ sᴜᴅᴏ ᴜsᴇʀ`"
                 await e.reply_text(text)
           else:
               counts = int(TheAltronX[0])
-              await e.reply_text("`ᴅᴍ ʀᴀɪᴅ sᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ`")
+              await e.reply_text("`ᴅᴍ ʀᴀɪᴅ sᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ`☠️")
               for _ in range(counts):
                     reply = choice(RAID)
                     msg = f"{reply}"
@@ -32,14 +32,14 @@ async def dmraid(xspam: Client, e: Message):
           ok = await xspam.get_users(user_id)
           id = ok.id
           if int(id) in VERIFIED_USERS:
-                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴀʟᴘʜᴀ x`"
+                text = f"`ᴠᴇʀɪғɪᴇᴅ ʙʏ ᴍᴇ`"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
                 text = f"`ᴛʜɪs ᴘᴇʀsᴏɴ ɪs ᴍʏ sᴜᴅᴏ ᴜsᴇʀ`"
                 await e.reply_text(text)
           else:
               counts = int(TheAltronX[0])
-              await e.reply_text("`ᴅᴍ ʀᴀɪᴅ sᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ`")
+              await e.reply_text("`ᴅᴍ ʀᴀɪᴅ sᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ`☠️")
               for _ in range(counts):
                     reply = choice(RAID)
                     msg = f"{reply}"
