@@ -8,7 +8,7 @@ from helpers.data import *
 
 @Client.on_message(filters.command(["hang"], ["/", "!", "."]) & filters.user(SUDO_USERS))
 async def hang(xspam: Client, e: Message): 
-    usage = "__ᴜsᴀɢᴇ:-__ !hang 10"
+    usage = "ᴜsᴀɢᴇ:- !hang 10"
     counts = e.command[1]
     if not counts:
         return await e.reply_text(usage)
