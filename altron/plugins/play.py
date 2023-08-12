@@ -83,7 +83,7 @@ async def play(client, m: Message):
                 await m.reply_text(f"""
 **▶ sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ sᴏɴɢ
 🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}
-  sᴏɴɢ ɴᴀᴍᴇ {songname}
+  sᴏɴɢ ɴᴀᴍᴇ:  {songname}
   **
 """,
                 )
@@ -112,7 +112,7 @@ async def play(client, m: Message):
                         m.reply_text(f"""
 **⃣ 𝑨𝒅𝒅𝒆𝒅 𝒊𝒏 𝒒𝒖𝒆𝒖𝒆 𝒂𝒕 {pos}
 🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
-sᴏɴɢ ɴᴀᴍᴇ {songname}""",
+sᴏɴɢ ɴᴀᴍᴇ:  {songname}""",
                         )
                     else:
                         try:
@@ -130,7 +130,7 @@ sᴏɴɢ ɴᴀᴍᴇ {songname}""",
                             await m.reply_text(f"""
 **▶ sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ sᴏɴɢ
 🖤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {m.from_user.mention}**
-sᴏɴɢ ɴᴀᴍᴇ {songname}""",
+sᴏɴɢ ɴᴀᴍᴇ:  {songname}""",
                             )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
