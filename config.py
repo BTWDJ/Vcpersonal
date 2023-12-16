@@ -62,14 +62,14 @@ bot = Client(
 
 if SESSION:
     client = Client(SESSION, API_ID, API_HASH, plugins=dict(root="altron"))
-    call_py = PyTgCalls(client, overload_quiet_mode=False)
+    call_py = PyTgCalls(client)
 else:
     client = None
     call_py = None
 
 if SESSION2:
     client2 = Client(SESSION2, API_ID, API_HASH, plugins=dict(root="altron"))
-    call_py2 = PyTgCalls(client2, overload_quiet_mode=False)
+    call_py2 = PyTgCalls(client2)
 else:
     client2 = None
     call_py2 = None
